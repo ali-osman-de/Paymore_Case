@@ -1,0 +1,69 @@
+{
+  "transactions": [
+    {
+      "id": "TXN-2568SEU",
+      "timestamp": "2026-02-16T08:53:41.995Z",
+      "paymentType": null,
+      "status": null,
+      "financials": {
+        "baseAmount": null,
+        "currency": null,
+        "commission": {
+          "rate": null,
+          "calculatedAmount": null
+        },
+        "taxDetails": [
+          {
+            "type": null,
+            "rate": null,
+            "amount": null
+          }
+        ]
+      },
+      "merchant": {
+        "id": null,
+        "category": null,
+        "branch": {
+          "branchCode": null,
+          "city": null
+        }
+      },
+      "context": null,
+      "metadata": {
+        "terminalId": null,
+        "is3DSecure": null,
+        "campaignCode": null,
+        "refundInfo": null
+      }
+    },
+    {
+      "id": "TXN-2568SEU",
+      "timestamp": "2026-02-16T08:53:41.995Z",
+      "paymentType": null,
+      "status": null,
+      "financials": null,
+      "merchant": null,
+      "context": null,
+      "metadata": null
+    },
+    {
+      "id": "TXN-2568SEU",
+      "timestamp": "2026-02-16T08:53:41.995Z",
+      "paymentType": null,
+      "status": null,
+      "financials": {
+        "baseAmount": null,
+        "currency": null,
+        "commission": null,
+        "taxDetails": null
+      },
+      "merchant": {
+        "id": null,
+        "category": null,
+        "branch": null
+      },
+      "context": null,
+      "metadata": null
+    }
+  ]
+}
