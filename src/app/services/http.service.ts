@@ -5,8 +5,8 @@ import { firstValueFrom } from 'rxjs';
 @Injectable({providedIn: 'root'})
 export class HttpService {
     constructor(private httpClient: HttpClient) { }
-    //"http://localhost:3000/transactions"
-    baseUrl: string = "https://paymore-case.onrender.com/transactions";
+    
+    baseUrl: string = "http://localhost:3000/transactions";
     
     async get<T>(
         callback: (response: T) => void | Promise<void>,
