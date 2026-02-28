@@ -5,6 +5,9 @@ Projeyi Docker üzerinde tek hamlede ayağı kaldırabilir, sunucu davranışlar
 
 Eğer lokalde projeyi başlatacaksanız yapılması gerekenler aşağıda listelenmiştir. Ek olarak `json-server --watch paymore-case.json` çalıştırılmalıdır.
 
+Proje Vercel üzerinde de aktif olarak erişilebilir yerel ağ erişimi ile birlikte datalara erişim olacaktır.
+Client kısmı --> https://paymore-case-c3k0isp5x-aliosmandes-projects.vercel.app/
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
 
 ## Development server
