@@ -32,7 +32,7 @@ export default class DashboardComponent implements OnInit {
         }
 
         this.loading = true;
-        const pagedUrl = `http://localhost:3000/transactions?_page=${this.page}&_per_page=${this.limit}`;
+        const pagedUrl = `https://paymore-case.onrender.com/transactions?_page=${this.page}&_per_page=${this.limit}`;
 
         this.#http.get<{ data?: Transaction[] | null }>(
             (response) => {
