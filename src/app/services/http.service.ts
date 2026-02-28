@@ -6,7 +6,7 @@ import { firstValueFrom } from 'rxjs';
 export class HttpService {
     constructor(private httpClient: HttpClient) { }
     
-    baseUrl: string = "http://localhost:3000/transactions";
+    baseUrl: string = "https://paymore-case.onrender.com/transactions";
     
     async get<T>(
         callback: (response: T) => void | Promise<void>,
