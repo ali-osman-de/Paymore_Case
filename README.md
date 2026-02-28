@@ -1,5 +1,10 @@
 # Paymore
 
+Projeyi Docker üzerinde tek hamlede ayağı kaldırabilir, sunucu davranışları sergileyecektir. Proje dizinine gelindiğinde Paymore klasörünün içinde `docker compose up` veya `docker compose up -d` komutlarından bir tanesi çalıştırıldığında proje ayağa kalkacaktır. Ardından projeyi görüntülemek için client kısmı `localhost:4200` json-server kısmı ise `localhost:3000` de olacaktır.
+
+
+Eğer lokalde projeyi başlatacaksanız yapılması gerekenler aşağıda listelenmiştir. Ek olarak `json-server --watch paymore-case.json` çalıştırılmalıdır.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
 
 ## Development server
