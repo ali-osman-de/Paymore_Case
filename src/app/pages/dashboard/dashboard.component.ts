@@ -32,11 +32,9 @@ export default class DashboardComponent implements OnInit {
         }
 
         this.loading = true;
-        const pagedUrl = `http://localhost:3000/transactions?_page=${this.page}&_per_page=${this.limit}`;
-
-        this.#http.get<{ data?: Transaction[] | null }>(
+        this.#http.getAllDataBySized<{data: Transaction[]}>(
             (response) => {
-                const transactions = response?.data ?? [];
+                const transactions = response.data;
                 this.hasMore = transactions.length === this.limit;
                 this.transactions = [...this.transactions, ...transactions];
 
@@ -53,7 +51,8 @@ export default class DashboardComponent implements OnInit {
                 this.loading = false;
                 this.#cdr.detectChanges();
             },
-            pagedUrl
+            this.page,
+            this.limit
         );
     }
 

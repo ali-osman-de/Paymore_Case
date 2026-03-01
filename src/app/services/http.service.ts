@@ -10,11 +10,26 @@ export class HttpService {
     
     async get<T>(
         callback: (response: T) => void | Promise<void>,
-        errorCallback?: (error: HttpErrorResponse) => void | Promise<void>,
-        url?: string
+        errorCallback?: (error: HttpErrorResponse) => void | Promise<void>
     ): Promise<void> {
         try {
-            const requestUrl = url ?? this.baseUrl;
+            const response = await firstValueFrom(this.httpClient.get<T>(this.baseUrl));
+            await callback(response);
+        } catch (error) {
+            if (errorCallback) {
+                await errorCallback(error as HttpErrorResponse);
+            }
+        }
+    }
+
+    async getAllDataBySized<T>(
+        callback: (response: T) => void | Promise<void>,
+        errorCallback?: (error: HttpErrorResponse) => void | Promise<void>,
+        page?: number,
+        limit?: number
+    ): Promise<void> {
+        try {
+            const requestUrl = this.baseUrl + `?_page=${page}&_per_page=${limit}`;
             const response = await firstValueFrom(this.httpClient.get<T>(requestUrl));
             await callback(response);
         } catch (error) {
